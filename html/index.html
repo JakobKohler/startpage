@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schasch</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function searchDuckDuckGo(event) {
+            if (event.key === 'Enter') {
+                const query = document.getElementById('searchInput').value;
+                const url = `https://www.duckduckgo.com/?q=${encodeURIComponent(query)}`;
+                window.location.href = url;
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+        if (event.key) {
+            document.getElementById('searchInput').focus();
+        }
+});
+    </script>
+    <script src="popups.js" defer></script>
+    <a rel="me" href="https://urbanists.social/@schasch"></a>
+</head>
+<body>
+    <div class="header">Wasserwirbel Joel 🗣️🗣️🗣️</div>
+    <p class="day">Heute ist <b>Arbeite-an-Bahhofottos-Tag</b></p>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="https://cdn.7tv.app/emote/01G4H6K8E8000FNPC3P1251DYM/4x.webp" alt="Image 1">
+            <!-- <img src="assets/pape.gif" alt="Image 1"> -->
+
+            <!-- <video width="640" height="360" controls>
+                <source src="assets/pape.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video> -->
+        </div>
+
+    </div>
+    <input type="text" id="searchInput" placeholder="Search DuckDuckGo..." onkeydown="searchDuckDuckGo(event)">
+
+    <div id="popup">
+    </div>
+</body>
+</html>
