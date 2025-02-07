@@ -6,6 +6,8 @@ log() {
     echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"
 }
 
+cd /var/www/startpage.schasch.xyz || { log "Failed to navigate to repository directory"; exit 1; }
+
 if git pull origin main; then
     log "PULL SUCCESS"
 else
