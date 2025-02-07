@@ -6,7 +6,7 @@ log() {
     echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"
 }
 
-if git pull origin main; then
+if git pull origin master; then
     log "PULL SUCCESS"
 else
     log "PULL FAILED"
