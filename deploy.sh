@@ -8,7 +8,7 @@ log() {
 
 cd /var/www/startpage.schasch.xyz || { log "Failed to navigate to repository directory"; exit 1; }
 
-if git pull origin main; then
+if git pull origin master; then
     log "PULL SUCCESS"
 else
     log "PULL FAILED"
